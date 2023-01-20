@@ -1,12 +1,12 @@
-/******************************************************************************
+/*******************************************************************************
 * File Name:   mqtt_publisher.h
 *
 * Description: This file is the public interface of mqtt_publisher.c
 *
 * Related Document: See README.md
 *
-*******************************************************************************
-* Copyright 2021, Cypress Semiconductor Corporation (an Infineon company) or
+********************************************************************************
+* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related

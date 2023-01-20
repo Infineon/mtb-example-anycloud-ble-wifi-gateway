@@ -1,4 +1,4 @@
-/******************************************************************************
+/*******************************************************************************
 * File Name:   mqtt_subscriber.c
 *
 * Description: This file contains the task that initializes the subscribes to
@@ -7,8 +7,8 @@
 *
 * Related Document: See README.md
 *
-*******************************************************************************
-* Copyright 2021, Cypress Semiconductor Corporation (an Infineon company) or
+********************************************************************************
+* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -89,7 +89,6 @@ cy_mqtt_subscribe_info_t subscribe_info =
     .topic_len = (sizeof(MQTT_SUB_TOPIC) - 1)
 };
 
-
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/
@@ -124,9 +123,14 @@ void subscriber_task(void *pvParameters)
     {
         /* Block till a notification is received from the subscriber callback. */
         xTaskNotifyWait(0, 0, (uint32_t*) &light_level, portMAX_DELAY);
-
-        mesh_client_set_level(MESH_LEVEL_CLIENT_ELEMENT_INDEX, (uint8_t) light_level);
-
+        if(0 != node_data.node_status[1u])
+        {
+            mesh_client_set_level(MESH_LEVEL_CLIENT_ELEMENT_INDEX, (uint8_t) light_level);
+        }
+        else
+        {
+            printf("Mesh node is not provisioned\r\n");
+        }
     }
 }
 

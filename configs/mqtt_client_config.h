@@ -7,7 +7,7 @@
 * Related Document: See README.md
 *
 *******************************************************************************
-* Copyright 2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -53,7 +53,8 @@
 
 /***************** MQTT CLIENT CONNECTION CONFIGURATION MACROS *****************/
 /* MQTT Broker/Server address and port used for the MQTT connection. */
-#define MQTT_BROKER_ADDRESS               "MY_MQTT_BROKER_ADDRESS"
+#define MQTT_BROKER_ADDRESS               "MQTT_BROKER_ADDRESS"
+
 #define MQTT_PORT                         8883
 
 /* Set this macro to 1 if a secure (TLS) connection to the MQTT Broker is  

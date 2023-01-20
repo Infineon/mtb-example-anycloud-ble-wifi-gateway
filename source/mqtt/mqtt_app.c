@@ -1,4 +1,4 @@
-/******************************************************************************
+/*******************************************************************************
 * File Name:   mqtt_app.c
 *
 * Description: This file contains the task that handles initialization &
@@ -9,8 +9,8 @@
 *
 * Related Document: See README.md
 *
-*******************************************************************************
-* Copyright 2021, Cypress Semiconductor Corporation (an Infineon company) or
+********************************************************************************
+* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -61,7 +61,6 @@
 /* Middleware libraries */
 #include "cy_retarget_io.h"
 #include "cy_wcm.h"
-#include "cy_lwip.h"
 
 #include "cy_mqtt_api.h"
 #include "clock.h"

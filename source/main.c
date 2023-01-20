@@ -1,12 +1,12 @@
-/******************************************************************************
+/*******************************************************************************
 * File Name:   main.c
 *
 * Description: This is the source code of IoT Gateway Example for ModusToolbox.
 *
 * Related Document: See README.md
 *
-*******************************************************************************
-* Copyright 2021, Cypress Semiconductor Corporation (an Infineon company) or
+********************************************************************************
+* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -59,7 +59,7 @@
 #include <FreeRTOS.h>
 #include <task.h>
 
-/******************************************************************************
+/*******************************************************************************
 * Macros
 *******************************************************************************/
 /* PWM Frequency for LED Blink rate at 2Hz */
@@ -85,12 +85,10 @@ void mesh_app_init_callback(wiced_bool_t is_provisioned);
 static void led_set_state(uint8_t value);
 static void button_task(void *pvParameters);
 static void gpio_interrupt_handler(void *handler_arg, cyhal_gpio_event_t event);
-/******************************************************************************
+
+/*******************************************************************************
 * Global Variables
 ******************************************************************************/
-/* This enables RTOS aware debugging. */
-volatile int uxTopUsedPriority;
-
 uint64_t button_pushed_time = 0u;
 uint32_t button_previous_value = 1u;
 uint32_t button_pushed_duration = 0u;
@@ -120,8 +118,6 @@ int main()
 {
     cy_rslt_t result;
     BaseType_t rtos_result;
-    /* This enables RTOS aware debugging in OpenOCD. */
-    uxTopUsedPriority = configMAX_PRIORITIES - 1;
 
     /* Initialize the board support package. */
     result = cybsp_init();
@@ -217,7 +213,6 @@ int main()
      CY_ASSERT(0u);
 }
 
-
 /*******************************************************************************
 * Function Name: mesh_app_init_callback
 ********************************************************************************
@@ -260,7 +255,6 @@ void mesh_app_init_callback(wiced_bool_t is_provisioned)
     printf("Mesh model initialization done!\r\n");
 
 }
-
 
 /*******************************************************************************
 * Function Name: led_set_state

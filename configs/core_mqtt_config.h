@@ -5,8 +5,9 @@
 *
 * Related Document: See README.md
 *
+*
 *******************************************************************************
-* Copyright 2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2020-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -38,9 +39,6 @@
 * so agrees to indemnify Cypress against all liability.
 *******************************************************************************/
 
-/*******************************************************************************
- * Include guard
- ******************************************************************************/
 #ifndef CORE_MQTT_CONFIG_H_
 #define CORE_MQTT_CONFIG_H_
 
